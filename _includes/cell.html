@@ -1,0 +1,63 @@
+<main class="container bg-body rounded py-3 shadow-sm"> 
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">Documentation</th>
+        <th scope="col">2FA Type</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for website in site.data.2fasites.websites %}
+      {% if website.tfa %}
+
+      <tr class="align-middle">
+        <!-- <th scope="row"></th> -->
+        <td>
+          <div class="d-flex">
+            <img class="my-2 rounded" src="img/{{ website.img }}" alt="{{ website.name }}.png" width="32" height="32">
+            <div class="small lh-sm my-auto">
+              <div class="d-flex">
+                <a href="{{ website.url }}" target="_blank"><strong class="text-gray-dark btn">{{ website.name }}</strong></a>
+              </div>
+              <!-- <a href="{{ website.url }}" class="d-block">{{ website.url }}</a> -->
+            </div>
+          </div>
+        </td>
+        <td>
+          {% if website.doc %}
+          <a href="{{ website.doc }}">Doc</a></td>
+          {% endif %}
+        <td>
+
+          {% for local in website.tfa %}
+          <div><span class="badge bg-primary">{{ local }}</span></div>
+          
+            <!-- {% if local == "sms" %}
+            <div><span class="badge bg-warning text-dark">{{ local }}</span></div>
+            {% endif %}
+
+            {% if local == "totp" %}
+            <div><span class="badge bg-info text-dark">{{ local }}</span></div>
+            {% endif %}
+
+            {% if local == "U2F" %}
+            <div><span class="badge bg-light text-dark">{{ local }}</span></div>
+            {% endif %} -->
+
+          {% endfor %}
+
+        </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+
+    </tbody>
+
+  </table>
+  <!-- <small class="d-block text-center my-3">
+    <a href="#">All updates</a>
+  </small> -->
+</main>
