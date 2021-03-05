@@ -28,24 +28,12 @@
         </td>
         <td>
           {% if website.doc %}
-          <a href="{{ website.doc }}">Doc</a></td>
+          <a href="{{ website.doc }}" target="_blank">Doc</a></td>
           {% endif %}
         <td>
 
           {% for local in website.tfa %}
           <div><span class="badge bg-primary">{{ local }}</span></div>
-          
-            <!-- {% if local == "sms" %}
-            <div><span class="badge bg-warning text-dark">{{ local }}</span></div>
-            {% endif %}
-
-            {% if local == "totp" %}
-            <div><span class="badge bg-info text-dark">{{ local }}</span></div>
-            {% endif %}
-
-            {% if local == "U2F" %}
-            <div><span class="badge bg-light text-dark">{{ local }}</span></div>
-            {% endif %} -->
 
           {% endfor %}
 
