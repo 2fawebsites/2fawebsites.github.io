@@ -8,6 +8,59 @@ websites:
       - proprietary
     doc: https://support.apple.com/en-us/HT204915
 
+  - name: Amazon
+    url: https://www.amazon.com
+    img: amazon.png
+    tfa:
+      - sms
+      - phone
+      - totp
+    doc: https://www.amazon.com/gp/help/customer/display.html?nodeId=201962420
+    exception: "SMS or phone call required to enable 2FA. Enabling on Amazon.com activates 2FA on other regional Amazon sites, such as UK and DE."
+
+  - name: Facebook
+    url: https://facebook.com
+    img: facebook.png
+    tfa:
+      - sms
+      - totp
+      - u2f
+    doc: https://www.facebook.com/help/148233965247823
+    exception: "Hardware 2FA requires also enabling a back-up method and is unsupported on mobile."
+
+  - name: Instagram
+    url: https://www.instagram.com
+    img: instagram.png
+    tfa:
+      - sms
+      - totp
+    doc: https://help.instagram.com/566810106808145
+
+  - name: eBay
+    url: https://www.ebay.com
+    img: ebay.png
+    tfa:
+      - sms
+      - proprietary
+    doc: https://community.ebay.com/t5/Announcements/eBay-launches-a-new-2-step-verification-method-to-increase/ba-p/29818464
+
+  - name: PayPal
+    url: https://www.paypal.com
+    img: paypal.png
+    tfa:
+      - sms
+      - totp
+    doc: https://www.paypal.com/us/smarthelp/article/faq4057
+    exception: "2FA is only available in a few countries. Contact PayPal on Twitter for an up-to-date list of available countries."
+
+  - name: Cloudflare
+    url: https://cloudflare.com
+    img: cloudflare.png
+    tfa:
+      - totp
+      - u2f
+    doc: https://support.cloudflare.com/hc/en-us/articles/200167906
+
   - name: Backblaze
     url: https://www.backblaze.com
     img: backblaze.png
@@ -16,8 +69,17 @@ websites:
       - totp
     doc: https://help.backblaze.com/hc/en-us/articles/217666588
 
+  - name: Epic+Games
+    url: https://epicgames.com
+    img: epicgames.png
+    tfa:
+      - sms
+      - email
+      - totp
+    doc: https://www.epicgames.com/help/en-US/c74/c112/a3218
+
   - name: Box
-    url: https://www.box.com/
+    url: https://www.box.com
     img: box.png
     tfa:
       - sms
@@ -4551,15 +4613,6 @@ websites:
     doc: https://support.enjin.com/hc/en-us/articles/201090770
     exception: "2FA is only available on paid plans."
 
-  - name: Epic+Games
-    url: https://www.epicgames.com/
-    img: epicgames.png
-    tfa:
-      - sms
-      - email
-      - totp
-    doc: https://www.epicgames.com/help/en-US/c74/c112/a3218
-
   - name: ESL
     url: https://www.eslgaming.com
     img: esl.png
@@ -6167,15 +6220,6 @@ websites:
       - phone
     doc: https://payoneer.custhelp.com/app/answers/detail/a_id/31268
 
-  - name: PayPal
-    url: https://www.paypal.com/
-    img: paypal.png
-    tfa:
-      - sms
-      - totp
-    doc: https://www.paypal.com/us/smarthelp/article/faq4057
-    exception: "2FA is only available in a few countries. Contact PayPal on Twitter for an up-to-date list of available countries."
-
   - name: Paysafecard
     url: https://www.paysafecard.com/
     img: paysafecard.png
@@ -6445,16 +6489,6 @@ websites:
       - sms
     doc: https://allegro.pl/pomoc/dla-kupujacych/logowanie-i-haslo/dwustopniowe-logowanie-najczesciej-zadawane-pytania-dykqg9nMKSZ
 
-  - name: Amazon
-    url: https://www.amazon.com
-    img: amazon.png
-    tfa:
-      - sms
-      - phone
-      - totp
-    doc: https://www.amazon.com/gp/help/customer/display.html?nodeId=201962420
-    exception: "SMS or phone call required to enable 2FA. Enabling on Amazon.com activates 2FA on other regional Amazon sites, such as UK and DE."
-
   - name: Apple
     url: https://appleid.apple.com
     img: apple.png
@@ -6480,14 +6514,6 @@ websites:
     doc: https://www.digitec.ch/en/page/6589
     regions:
       - ch
-
-  - name: eBay
-    url: https://www.ebay.com
-    img: ebay.png
-    tfa:
-      - sms
-      - proprietary
-    doc: https://community.ebay.com/t5/Announcements/eBay-launches-a-new-2-step-verification-method-to-increase/ba-p/29818464
 
   - name: Etsy
     url: https://www.etsy.com/
@@ -6605,14 +6631,6 @@ websites:
     tfa:
       - hardware
     exception: "Requires X.509-capable cryptotoken or smartcard."
-
-  - name: Cloudflare
-    url: https://cloudflare.com
-    img: cloudflare.png
-    tfa:
-      - totp
-      - u2f
-    doc: https://support.cloudflare.com/hc/en-us/articles/200167906
 
   - name: Cobalt
     url: https://cobalt.io/
@@ -6810,16 +6828,6 @@ websites:
       - totp
     doc: https://blog.bufferapp.com/introducing-the-safest-social-media-publishing-on-the-web
 
-  - name: Facebook
-    url: https://facebook.com
-    img: facebook.png
-    tfa:
-      - sms
-      - totp
-      - u2f
-    doc: https://www.facebook.com/help/148233965247823
-    exception: "Hardware 2FA requires also enabling a back-up method and is unsupported on mobile."
-
   - name: HootSuite
     url: https://hootsuite.com
     img: hootsuite.png
@@ -6828,14 +6836,6 @@ websites:
       - email
     doc: https://help.hootsuite.com/hc/en-us/articles/204595950
     exception: "Email is always enabled as backup method for Software Token."
-
-  - name: Instagram
-    url: https://www.instagram.com
-    img: instagram.png
-    tfa:
-      - sms
-      - totp
-    doc: https://help.instagram.com/566810106808145
 
   - name: LinkedIn
     url: https://linkedin.com
@@ -7396,7 +7396,7 @@ websites:
     tfa:
       - totp
       - sms
-    doc: https://support.box.com/hc/en-us/articles/360044196473
+    doc: https://support.box.com/hc/en-us/articles/360043697154
 
   - name: 500px
     url: https://500px.com
