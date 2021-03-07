@@ -1,52 +1,37 @@
-<main class="container bg-body rounded py-3 shadow-sm">
-  <table class="table table-hover">
+<div class="container px-0">
+  <table class="table table-hover bg-body rounded py-3 shadow-sm">
     <thead>
       <tr>
-        <!-- <th scope="col">#</th> -->
         <th scope="col">Name</th>
         <th scope="col">Documentation</th>
         <th scope="col">2FA Type</th>
       </tr>
     </thead>
+
     <tbody>
-
       {% for website in site.data.2fasites.websites %}
-      {% if website.tfa %}
-
-      <tr class="align-middle">
-        <!-- <th scope="row"></th> -->
-        <td>
-          <div class="d-flex">
-            <img class="my-2 rounded" src="img/{{ website.img }}" alt="{{ website.name }}.png" width="32" height="32">
-            <div class="small lh-sm my-auto">
-              <div class="d-flex">
-                <!-- <a href="{{ website.url }}" target="_blank"><strong class="text-gray-dark btn">{{ website.name }}</strong></a> -->
-                <a href="{{ website.url }}" target="_blank"><strong class="text-start text-gray-dark btn">{{ website.name }}</strong></a>
-              </div>
-              <!-- <a href="{{ website.url }}" class="d-block">{{ website.url }}</a> -->
+        {% if website.tfa %}
+        <tr class="align-middle">
+          <td class="pe-0">
+            <div class="d-flex align-items-center">
+              <img class="my-2 me-2 rounded" src="img/{{ website.img }}" alt="{{ website.name }}.png" width="32" height="32">
+              <a href="{{ website.url }}" target="_blank" class="text-dark text-start" style="text-decoration: none !important"><p class="m-0">{{ website.name }}</p></a>
             </div>
-          </div>
-        </td>
-        <td>
-          {% if website.doc %}
-          <a href="{{ website.doc }}" target="_blank">How to enable</a></td>
-          {% endif %}
-        <td>
-
-          {% for local in website.tfa %}
-          <div><span class="badge bg-primary">{{ local }}</span></div>
-
-          {% endfor %}
-
-        </td>
-      </tr>
-      {% endif %}
+          </td>
+          <td class="ps-0">
+            {% if website.doc %}
+            <a href="{{ website.doc }}" target="_blank">How to enable</a>
+            {% endif %}
+          </td>
+          <td class="ps-0">
+            {% for type in website.tfa %}
+            <div><span class="badge bg-primary">{{ type }}</span></div>
+            {% endfor %}
+          </td>
+        </tr>
+        {% endif %}
       {% endfor %}
-
     </tbody>
 
   </table>
-  <!-- <small class="d-block text-center my-3">
-    <a href="#">All updates</a>
-  </small> -->
-</main>
+</div>
