@@ -2,8 +2,7 @@
 title: 2FA Websites List
 email: support@2stabel.com
 description: >- # this means to ignore newlines until "baseurl:"
- Аn exhaustive list of services that support Two-Factor Authentication (2FA) ability. 
- Don't be hacked or phished, enable two-factor authentication.
+ Аn exhaustive list of services that support Two-Factor Authentication (2FA) ability.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
