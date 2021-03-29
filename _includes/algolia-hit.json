@@ -1,0 +1,12 @@
+{% if include.hit %}
+{
+{%- for var in include.hit -%}
+  {%- if site.algolia.vars contains var -%}
+  "{{ var }}": "{{ include.hit[var] }}"{% if forloop.last != true %},{% endif %}
+  {%- endif -%}
+  {%- if forloop.last == true -%}
+  "objectID": "{{ include.hit.path }}"
+  {%- endif -%}
+{%- endfor -%}
+}
+{%- endif -%}
