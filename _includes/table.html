@@ -1,8 +1,8 @@
 <div class="container px-0">
-  <table class="table table-hover bg-body rounded py-3 shadow-sm">
+  <table class="table table-hover bg-body rounded shadow-sm">
     <thead>
       <tr>
-        <th scope="col">Name</th>
+        <th scope="col bg-primary">Name</th>
         <th scope="col" class="ps-0">Info</th>
         <th scope="col" class="ps-0">2FA Type</th>
       </tr>
@@ -14,8 +14,12 @@
         <tr class="align-middle">
           <td class="pe-0">
             <div class="d-flex align-items-center">
-              <img class="my-2 me-2 rounded" src="img/{{ website.img }}" alt="{{ website.name }}.png" width="32" height="32">
-              <a href="{{ website.url }}" target="_blank" class="text-dark text-start" style="text-decoration: none !important"><p class="m-0">{{ website.name }}</p></a>
+              <div>
+                <a href="{{ website.url }}" class="d-flex align-items-center text-dark text-decoration-none">
+                  <img class="me-2 rounded" src="img/{{ website.img }}" width="32" height="32" alt="{{ website.name }}.png">
+                  <span class="fs-6">{{ website.name }}</span>
+                  </a>
+              </div>
             </div>
           </td>
           <td class="ps-0">
