@@ -9,6 +9,16 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+google_analytics:
+  id: 'G-KY86T8FC64'          # Fill with your Google Analytics ID
+  pv:
+    # The Google Analytics pageviews switch.
+    enabled: false
+    # the next options only valid when `google_analytics.pv` is enabled.
+    proxy_url: ''
+    proxy_endpoint: ''
+    cache: false  # pv data local cache, good for the users from GFW area.
+
 twitter:
   username: authwidget
   card: summary
