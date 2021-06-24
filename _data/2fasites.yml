@@ -12,8 +12,8 @@ websites:
     url: https://www.weboke.nl
     img: weboke.png
     tfa:
-      - totp
       - hardware
+      - totp
     doc: https://www.weboke.nl/knowledgebase/127/Hoe-schakel-ik-tweestapsverificatie-in.html
 
   - name: Amazon
