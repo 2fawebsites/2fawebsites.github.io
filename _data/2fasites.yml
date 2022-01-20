@@ -7,14 +7,6 @@ websites:
       - phone
       - proprietary
     doc: https://support.apple.com/en-us/HT204915
- 
-  - name: WebOké
-    url: https://www.weboke.nl
-    img: weboke.png
-    tfa:
-      - hardware
-      - totp
-    doc: https://www.weboke.nl/knowledgebase/127/Hoe-schakel-ik-tweestapsverificatie-in.html
 
   - name: Amazon
     url: https://www.amazon.com
@@ -307,6 +299,14 @@ websites:
       - sms
       - email
     doc: https://www.americafirst.com/online_banking.html
+ 
+  - name: WebOké
+    url: https://www.weboke.nl
+    img: weboke.png
+    tfa:
+      - hardware
+      - totp
+    doc: https://www.weboke.nl/knowledgebase/127/Hoe-schakel-ik-tweestapsverificatie-in.html
 
   - name: America’s Christian Credit Union
     url: https://www.americaschristiancu.com
