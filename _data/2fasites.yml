@@ -3117,6 +3117,7 @@ websites:
     img: dnsimple.png
     tfa:
       - totp
+      - hardware
     doc: https://support.dnsimple.com/articles/two-factor-authentication/
 
   - name: Domains4Bitcoins.com
