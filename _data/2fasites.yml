@@ -8322,6 +8322,14 @@ websites:
       - totp
     doc: https://skrill.com/en-us/support#/path/ACCOUNT/Two-Factor-Authentication/905782552/Two-Factor-Authentication-2FA.htm
 
+  - name: Paribu
+    url: https://www.paribu.com/
+    img: paribu.png
+    tfa:
+      - sms
+      - totp
+    doc: https://destek.paribu.com/hc/articles/360010998153
+
   - name: Paxful
     url: https://paxful.com
     img: paxful.png
