@@ -6692,6 +6692,14 @@ websites:
       - hardware
     doc: https://www.entrust.com/multi-factor-authentication-tools/
 
+  - name: Generator Labs
+    url: https://generatorlabs.com/
+    img: generatorlabs.png
+    tfa:
+      - totp
+      - u2f
+    doc: https://docs.generatorlabs.com/setting-up-two-factor-authentication/
+
   - name: GeoTrust
     url: https://www.geotrust.com/
     img: geotrust.png
@@ -6751,13 +6759,6 @@ websites:
       - totp
     doc: http://support.pwnieexpress.com/customer/en/portal/articles/2858909
     exception: TFA can be enabled on Pwn Pulse Accounts upon customer request.
-
-  - name: RBLTracker
-    url: https://rbltracker.com/
-    img: rbltracker.png
-    tfa:
-      - totp
-    doc: https://rbltracker.com/docs/setting-up-two-factor-authentication/
 
   - name: Sophos Central
     url: https://www.sophos.com
